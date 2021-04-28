@@ -2,10 +2,10 @@ import {Vehicle} from './vehicle.model';
 import {Motorise} from './motorise';
 
 export class Parking{
-  constructor(private name: string, private $vehicles: Motorise[] = []) {
+  constructor(private name: string, private $vehicles: Vehicle[] = []) {
   }
 
-  get vehicles(): Motorise[] {
+  get vehicles(): Vehicle[] {
     return this.$vehicles;
   }
 }

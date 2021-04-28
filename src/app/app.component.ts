@@ -8,6 +8,8 @@ import {Parking} from './model/carmanager/parking.model';
 import {Truck} from './model/carmanager/truck.model';
 import {Boat} from './model/carmanager/boat.model';
 import {Bike} from './model/carmanager/bike.model';
+import {Calculator} from './model/calculator.model';
+import {VehicleFactory} from './model/carmanager/vehiclefactory';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +20,12 @@ export class AppComponent {
   title = 'typescriptbasic';
 
   constructor() {
-    const p = new Parking('Superpark');
-    const b = new Boat(121, 'bobato', 12);
-    const bi = new Bike();
-    const c = new Car(121, 'bobato', 12, 'd');
+    const parking = new Parking('superpark');
+    parking.vehicles.push(VehicleFactory.createCar('red'));
+    parking.vehicles.push(VehicleFactory.createTruck('red'));
 
-    p.vehicles.push(b);
-    p.vehicles.push(c);
 
-    for (const v of p.vehicles) {
-      v.inition();
-    }
+    console.log(parking);
   }
 
 }
