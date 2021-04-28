@@ -7,6 +7,6 @@ export class Eleve extends Person{
     }
 
     accessCourse(): void {
-      console.log('Access course');
+      console.log(`${this.firstName} ${this.lastname} access course`);
     }
 }

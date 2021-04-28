@@ -1,6 +1,6 @@
-export class Person {
+export abstract class Person {
 
-    constructor(private id: number, private firstName: string, private lastname: string) {
+    constructor(private id: number, protected firstName: string, protected lastname: string) {
         console.log('constructor de Person');
     }
 
@@ -8,5 +8,3 @@ export class Person {
         console.log(`${this.firstName} ${this.lastname} accède au restaurant`);
     }
 }
-
-
