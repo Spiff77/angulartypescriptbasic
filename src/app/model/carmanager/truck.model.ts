@@ -1,13 +1,8 @@
 import {Vehicle} from './vehicle.model';
 
-export class Car extends Vehicle{
+export class Truck extends Vehicle{
 
-  constructor(id: number, brand: string, horsepower: number, private color: string) {
+  constructor(id: number, brand: string, horsepower: number, private color: string, private weigth: number) {
     super(id, brand, horsepower);
   }
-
-  honk(): void {
-    console.log(`${this.brand} is honking`);
-  }
-
 }

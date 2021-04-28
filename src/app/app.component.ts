@@ -4,6 +4,10 @@ import {Car} from './model/carmanager/car.model';
 import {Vehicle} from './model/carmanager/vehicle.model';
 import {Prof} from './model/trainingmanager/prof.model';
 import {ClassRoom} from './model/trainingmanager/classroom.model';
+import {Parking} from './model/carmanager/parking.model';
+import {Truck} from './model/carmanager/truck.model';
+import {Boat} from './model/carmanager/boat.model';
+import {Bike} from './model/carmanager/bike.model';
 
 @Component({
   selector: 'app-root',
@@ -14,24 +18,16 @@ export class AppComponent {
   title = 'typescriptbasic';
 
   constructor() {
-    const e1 = new Eleve(10, 'Franck', 'Zappa', 'ABCD5555', 18);
-    const e2 = new Eleve(13, 'Franck1', 'Zappa', 'ABCD5555', 18);
-    const e3 = new Eleve(14, 'Franck2', 'Zappa', 'ABCD5555', 18);
-    const p1 = new Prof(11, 'Chuck', 'Norris', 'Dentelle');
-    const p2 = new Prof(12, 'Chuck1', 'Norris', 'Dentelle');
-    const c1 = new Car(10, 'Peugeot', 2, 'red');
+    const p = new Parking('Superpark');
+    const b = new Boat(121, 'bobato', 12);
+    const bi = new Bike();
+    const c = new Car(121, 'bobato', 12, 'd');
 
-    const cr1 = new ClassRoom('504');
+    p.vehicles.push(b);
+    p.vehicles.push(c);
 
-    cr1.population.push(e1, e2, p1, p2, e3);
-
-    for (const p of cr1.population) {
-      if (p instanceof Eleve) {
-         (p as Eleve).accessCourse();
-      }
-      if (p instanceof Prof) {
-        (p as Prof).giveCourse();
-      }
+    for (const v of p.vehicles) {
+      v.inition();
     }
   }
 
