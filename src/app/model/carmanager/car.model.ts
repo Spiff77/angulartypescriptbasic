@@ -20,4 +20,7 @@ export class Car extends Vehicle implements Motorise, Roulant{
     console.log('La voiture conduit dans la ville');
   }
 
+  avancer(): void {
+  }
+
 }

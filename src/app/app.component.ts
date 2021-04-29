@@ -1,15 +1,7 @@
 import { Component } from '@angular/core';
-import {Eleve} from './model/trainingmanager/eleve.model';
-import {Car} from './model/carmanager/car.model';
-import {Vehicle} from './model/carmanager/vehicle.model';
-import {Prof} from './model/trainingmanager/prof.model';
-import {ClassRoom} from './model/trainingmanager/classroom.model';
-import {Parking} from './model/carmanager/parking.model';
-import {Truck} from './model/carmanager/truck.model';
-import {Boat} from './model/carmanager/boat.model';
-import {Bike} from './model/carmanager/bike.model';
-import {Calculator} from './model/calculator.model';
-import {VehicleFactory} from './model/carmanager/vehiclefactory';
+import {Person} from './model/productmanager/person.model';
+import {Client} from './model/productmanager/client.model';
+import {Product} from './model/productmanager/product.model';
 
 @Component({
   selector: 'app-root',
@@ -20,12 +12,9 @@ export class AppComponent {
   title = 'typescriptbasic';
 
   constructor() {
-    const parking = new Parking('superpark');
-    parking.vehicles.push(VehicleFactory.createCar('red'));
-    parking.vehicles.push(VehicleFactory.createTruck('red'));
+  // const p = new Product(1, 1, 1, 1,  1, 1, 1);
+   // console.log(p);
 
-
-    console.log(parking);
   }
 
 }
