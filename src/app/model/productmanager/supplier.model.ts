@@ -7,10 +7,10 @@ export class Supplier extends Person implements Taxable{
   constructor(id: number,
               firstname: string,
               lastname: string,
-              active: boolean,
               public companyName: string,
               public bankAccountNumber: string,
               public ca: number = 0,
+              active?: boolean,
               age?: number
               ) {
     super(id, firstname, lastname, active, age);
