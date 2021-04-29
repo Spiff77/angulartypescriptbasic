@@ -8,10 +8,10 @@ export class Supplier extends Person implements Taxable{
               firstname: string,
               lastname: string,
               active: boolean,
-              age: number,
               public companyName: string,
               public bankAccountNumber: string,
-              public ca: number = 0
+              public ca: number = 0,
+              age?: number
               ) {
     super(id, firstname, lastname, active, age);
   }

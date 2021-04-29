@@ -6,7 +6,7 @@ export class Client extends Person{
               firstname: string,
               lastname: string,
               active: boolean,
-              age: number,
+              age?: number,
               public products: Product[] = []) {
     super(id, firstname, lastname, active, age);
   }
